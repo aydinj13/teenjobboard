@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { SanityLive } from "@/sanity/lib/live";
 import { Suspense } from "react";
+import { Banner } from "@/components/Banner";
 
 const notoSans = Noto_Sans({subsets:['latin'],variable:'--font-sans'});
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={cn("h-full", "antialiased", "font-sans", notoSans.variable)}
     >
       <body className="min-h-full flex flex-col">
+        <Banner />
         {children}
         <Suspense fallback={null}>
         <SanityLive />

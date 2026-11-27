@@ -15,6 +15,16 @@ export const jobType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'company',
+      type: 'string',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'companyLogo',
+      type: 'image',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: 'location',
       type: 'string',
       validation: (rule) => rule.required(),

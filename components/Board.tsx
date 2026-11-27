@@ -12,6 +12,7 @@ import {
 import { sanityFetch } from "@/sanity/lib/live";
 import { jobsQuery } from "@/sanity/lib/queries";
 import { EmploymentType, Job } from "@/sanity/types/job";
+import Link from "next/link";
 
 const EMPLOYMENT_TYPE_LABELS: Record<EmploymentType, string> = {
   "full-time": "Full time",
@@ -68,7 +69,9 @@ function JobCard({ job }: { job: Job }) {
       </CardContent>
       <CardFooter className="flex gap-2">
         <Button className="flex-1">
+          <Link href={`/job/${job._id}`}>
             Learn More
+          </Link>
         </Button>
       </CardFooter>
     </Card>

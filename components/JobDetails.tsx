@@ -1,7 +1,7 @@
 "use cache";
 
 import { notFound } from "next/navigation";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import Image from "next/image";
 import { jobByIdQuery } from "@/sanity/lib/queries";
 import { EmploymentType, Job } from "@/sanity/types/job";

@@ -1,8 +1,16 @@
-import { defineQuery } from "next-sanity";
+import { groq } from "next-sanity";
 
-export const JOB_TITLES_QUERY = defineQuery(/* groq */ `
-  *[_type == "jobs" && defined(title)] | order(title asc) {
+export const jobsQuery = groq`
+  *[_type == "job"] {
     _id,
-    title
+    _createdAt,
+    title,
+    description,
+    company,
+    "companyLogoUrl": companyLogo.asset->url,
+    location,
+    "pdfUrl": pdf.asset->url,
+    link,
+    employmentType,
   }
-`);
+`;

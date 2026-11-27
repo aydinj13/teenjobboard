@@ -1,7 +1,7 @@
 import {defineField, defineType} from 'sanity'
 
 export const jobType = defineType({
-  name: 'jobs',
+  name: 'job',
   type: 'document',
   fields: [
     defineField({

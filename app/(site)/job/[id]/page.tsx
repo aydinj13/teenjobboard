@@ -14,7 +14,7 @@ export default function JobPage({ params }: PageProps) {
         href="/"
         className="text-sm text-muted-foreground hover:text-foreground"
       >
-        ← Back to jobs
+        ← Back to home
       </Link>
 
       <Suspense

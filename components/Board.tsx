@@ -1,7 +1,7 @@
 "use cache"
 
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -68,11 +68,9 @@ function JobCard({ job }: { job: Job }) {
         </div>
       </CardContent>
       <CardFooter className="flex gap-2">
-        <Button className="flex-1">
-          <Link href={`/job/${job._id}`}>
+          <Link href={`/job/${job._id}`} className={buttonVariants({ variant: "default" })}>
             Learn More
           </Link>
-        </Button>
       </CardFooter>
     </Card>
   );
